@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "use": "sig",
+      "alg": "RS256",
+      "kid": "swandigitals-bot-2026-v1",
+      "n": "uK3V8aX2bN9jQ4rL8tP1wS7vY0mX5zK2pL8vR4tY9bN3jQ7rL1wS5vY0mX3zK2pL8vR4tY9bN3jQ7rL1wS5vY0mX3zK2pL8vR4tY9bN3jQ7rL1wS5vY0mX3zK2pL8vR4tY9bN3jQ7rL1wS5vY0mX3zK2pL8vR4tY9bN3jQ7rL1wS5vY0mX3zK2",
+      "e": "AQAB"
+    }
+  ]
+}

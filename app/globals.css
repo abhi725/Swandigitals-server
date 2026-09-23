@@ -29,10 +29,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* ── Scroll Reveal Animation ── */
+/* ── Scroll Reveal Animation — visible by default to prevent missing content ── */
 .reveal {
-    opacity: 0;
-    transform: translateY(28px);
+    opacity: 1;
+    transform: translateY(0);
     transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
                 transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
 }

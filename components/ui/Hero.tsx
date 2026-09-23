@@ -15,7 +15,7 @@ interface HeroProps {
 }
 
 const trustBadges = [
-    { icon: ShieldCheck, label: 'DPDP 2023 Aware' },
+    { icon: ShieldCheck, label: 'Flat ₹ Pricing' },
     { icon: Globe, label: 'Data Hosted in India' },
     { icon: Zap, label: 'Live in 7 Days' },
 ];

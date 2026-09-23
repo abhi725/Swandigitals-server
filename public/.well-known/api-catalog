@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://swandigitals.com/api",
+      "service-desc": [
+        {
+          "href": "https://swandigitals.com/openapi.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://swandigitals.com/api",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://swandigitals.com/api/health",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

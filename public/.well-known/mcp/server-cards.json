@@ -1,0 +1,9 @@
+{
+  "servers": [
+    {
+      "name": "SwanDigitals AI Platform MCP Server",
+      "version": "1.0.0",
+      "url": "https://swandigitals.com/.well-known/mcp/server-card.json"
+    }
+  ]
+}

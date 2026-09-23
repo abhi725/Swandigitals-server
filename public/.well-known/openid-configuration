@@ -1,0 +1,18 @@
+{
+  "issuer": "https://swandigitals.com",
+  "authorization_endpoint": "https://desk.swandigitals.com/oauth/authorize",
+  "token_endpoint": "https://desk.swandigitals.com/oauth/token",
+  "userinfo_endpoint": "https://desk.swandigitals.com/oauth/userinfo",
+  "jwks_uri": "https://swandigitals.com/.well-known/http-message-signatures-directory",
+  "response_types_supported": [
+    "code",
+    "id_token",
+    "token id_token"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ]
+}

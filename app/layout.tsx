@@ -3,7 +3,13 @@ import { DM_Sans } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 
-const dmSans = DM_Sans({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] })
+const dmSans = DM_Sans({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    display: 'swap',
+    fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    adjustFontFallback: true
+})
 
 export const metadata: Metadata = {
     // FIX: metadataBase resolves all relative OG/Twitter image URLs — eliminates build warnings

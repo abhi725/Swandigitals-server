@@ -105,11 +105,14 @@ export default function Header() {
                                 >
                                     {item.children ? (
                                         <>
-                                            <button className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer ${
-                                                isParentActive
-                                                    ? 'text-orange-600 bg-orange-50/40'
-                                                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
-                                            }`}>
+                                            <button 
+                                                onClick={() => setOpenDropdown(openDropdown === item.label ? null : item.label)}
+                                                className={`flex items-center gap-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer ${
+                                                    isParentActive
+                                                        ? 'text-orange-600 bg-orange-50/40 font-semibold'
+                                                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
+                                                }`}
+                                            >
                                                 {item.label}
                                                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${openDropdown === item.label ? 'rotate-180' : ''}`} />
                                             </button>
@@ -122,7 +125,7 @@ export default function Header() {
                                                                 href={child.href}
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
-                                                                className="flex items-center gap-2.5 px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors duration-150"
+                                                                className="flex items-center gap-2.5 px-3 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-lg transition-colors duration-150 cursor-pointer"
                                                                 onClick={() => setOpenDropdown(null)}
                                                             >
                                                                 {child.icon}
@@ -132,7 +135,7 @@ export default function Header() {
                                                             <Link
                                                                 key={child.href}
                                                                 href={child.href}
-                                                                className={`flex items-center gap-2.5 px-3 py-2 text-sm rounded-lg transition-colors duration-150 ${
+                                                                className={`flex items-center gap-2.5 px-3 py-2 text-sm rounded-lg transition-colors duration-150 cursor-pointer ${
                                                                     isActive(child.href)
                                                                         ? 'text-orange-600 bg-orange-50/55 font-semibold'
                                                                         : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
@@ -150,7 +153,7 @@ export default function Header() {
                                     ) : (
                                         <Link
                                             href={item.href}
-                                            className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 ${
+                                            className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-150 cursor-pointer ${
                                                 isActive(item.href)
                                                     ? 'text-orange-600 bg-orange-50/40 font-semibold'
                                                     : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'

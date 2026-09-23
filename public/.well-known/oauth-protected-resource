@@ -1,0 +1,15 @@
+{
+  "resource": "https://swandigitals.com/api",
+  "authorization_servers": [
+    "https://swandigitals.com"
+  ],
+  "scopes_supported": [
+    "read:chatbots",
+    "write:conversations",
+    "read:voicebot",
+    "write:knowledge"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ]
+}

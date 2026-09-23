@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agentskills.io/schemas/v0.2.0/index.json",
+  "version": "0.2.0",
+  "skills": [
+    {
+      "name": "customer-support-automation",
+      "type": "workflow",
+      "description": "Automates repetitive customer queries on WhatsApp, Web Chat, and Voice AI in 10 Indian languages.",
+      "url": "https://swandigitals.com/solutions/customer-service",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "voice-ai-agent-config",
+      "type": "telephony",
+      "description": "Configures inbound and outbound voice AI agents with sub-500ms audio latency and SIP trunking.",
+      "url": "https://swandigitals.com/features/voice-ai",
+      "sha256": "a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e"
+    }
+  ]
+}

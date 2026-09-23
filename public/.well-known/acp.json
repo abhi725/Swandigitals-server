@@ -1,0 +1,17 @@
+{
+  "protocol": {
+    "name": "acp",
+    "version": "1.0.0"
+  },
+  "api_base_url": "https://swandigitals.com/api",
+  "transports": [
+    "http",
+    "sse"
+  ],
+  "capabilities": {
+    "services": [
+      "chatbot_subscription",
+      "voice_agent_trunking"
+    ]
+  }
+}

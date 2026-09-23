@@ -1,0 +1,12 @@
+{
+  "protocol": "x402",
+  "version": "2.0.0",
+  "facilitator": "https://x402.org/facilitator",
+  "resources": [
+    {
+      "path": "/api/chatbots/query",
+      "price": "0.01",
+      "currency": "USD"
+    }
+  ]
+}

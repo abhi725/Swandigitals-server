@@ -29,7 +29,7 @@ export default function SolutionsContent() {
                 "Writes leads and conversation data straight into your CRM via HubSpot or n8n webhooks",
                 "Understands Hinglish, Tamil-English, and regional code-switching",
                 "Multi-turn conversation memory with context retention across visits",
-                "Cloud-hosted on Indian servers, DPDP-2023 aware, no lock-in"
+                "Cloud-hosted on Indian servers, no lock-in"
             ],
             bestFor: "High-volume customer support tickets, order status queries, lead scoring, product recommendations, and automated FAQ resolution."
         },
@@ -37,7 +37,7 @@ export default function SolutionsContent() {
             title: "Natural-Sounding Voice AI Agent",
             tagline: "Fast, Natural Vernacular Voice AI for Outbound Tele-qualification & Inbound Support",
             icp: "Small business owners, reception teams, outbound tele-sales managers, and clinic front desks looking to replace traditional IVR with human-like voice agents on Indian (+91) numbers.",
-            heroImage: "/dashboard-user.png",
+            heroImage: "/voicebot-agents.png",
             stats: [
                 { value: "Fast", label: "Voice Latency" },
                 { value: "Lower Cost", label: "vs Call Center" },
@@ -183,11 +183,12 @@ export default function SolutionsContent() {
                         <div className="mt-8 flex justify-center">
                             <div className="bg-white p-1.5 rounded-full border border-slate-200 shadow-md inline-flex gap-2">
                                 <button
+                                    type="button"
                                     onClick={() => setSelectedProduct('chatbot')}
-                                    className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                                    className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer relative z-10 ${
                                         selectedProduct === 'chatbot'
                                             ? 'bg-slate-900 text-white shadow-lg scale-105'
-                                            : 'text-slate-600 hover:text-slate-900 bg-transparent'
+                                            : 'text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-100/50'
                                     }`}
                                 >
                                     <MessageSquare className={`w-4 h-4 ${selectedProduct === 'chatbot' ? 'text-orange-400' : 'text-slate-500'}`} />
@@ -195,11 +196,12 @@ export default function SolutionsContent() {
                                 </button>
 
                                 <button
+                                    type="button"
                                     onClick={() => setSelectedProduct('voicebot')}
-                                    className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 ${
+                                    className={`flex items-center gap-2.5 px-6 py-3 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer relative z-10 ${
                                         selectedProduct === 'voicebot'
                                             ? 'bg-slate-900 text-white shadow-lg scale-105'
-                                            : 'text-slate-600 hover:text-slate-900 bg-transparent'
+                                            : 'text-slate-600 hover:text-slate-900 bg-transparent hover:bg-slate-100/50'
                                     }`}
                                 >
                                     <Phone className={`w-4 h-4 ${selectedProduct === 'voicebot' ? 'text-emerald-400' : 'text-slate-500'}`} />

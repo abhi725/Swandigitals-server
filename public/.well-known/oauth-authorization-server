@@ -1,0 +1,33 @@
+{
+  "issuer": "https://swandigitals.com",
+  "authorization_endpoint": "https://desk.swandigitals.com/oauth/authorize",
+  "token_endpoint": "https://desk.swandigitals.com/oauth/token",
+  "jwks_uri": "https://swandigitals.com/.well-known/http-message-signatures-directory",
+  "registration_endpoint": "https://desk.swandigitals.com/oauth/register",
+  "scopes_supported": [
+    "read:chatbots",
+    "write:conversations",
+    "read:voicebot",
+    "write:knowledge"
+  ],
+  "response_types_supported": [
+    "code",
+    "token"
+  ],
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "urn:ietf:params:oauth:grant-type:token-exchange"
+  ],
+  "agent_auth": {
+    "register_uri": "https://desk.swandigitals.com/oauth/register",
+    "supported_identity_types": [
+      "service_account",
+      "ai_agent"
+    ],
+    "credential_types": [
+      "bearer_token",
+      "mTLS"
+    ]
+  }
+}

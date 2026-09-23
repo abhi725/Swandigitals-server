@@ -624,114 +624,249 @@ export default function FeaturesContent() {
                         {activeProduct === 'chatbot' ? (
                             // CHATBOT DOM RENDER
                             <div className="space-y-24">
-                                {chatbotSections.map((sec) => (
-                                    <div key={sec.id} id={sec.id} className="scroll-mt-36">
-                                        <div className="reveal mb-10 text-center lg:text-left max-w-3xl">
-                                            <span className="inline-block px-3 py-1 bg-orange-100 border border-orange-200 text-orange-700 rounded-full text-xs font-extrabold uppercase mb-4 tracking-wider">
-                                                {sec.badge}
-                                            </span>
-                                            <h2 className="text-3xl font-extrabold text-slate-900 mb-3">{sec.title}</h2>
-                                            <p className="text-slate-500 font-medium text-lg leading-relaxed">{sec.description}</p>
-                                        </div>
+                                {chatbotSections.map((sec) => {
+                                    const hasImage = sec.id === 'inbox-mgmt' || sec.id === 'channels';
+                                    const imgSrc = sec.id === 'inbox-mgmt' ? '/chatbot-inbox.png' : '/dashboard-user.png';
+                                    const imgAlt = sec.id === 'inbox-mgmt' ? 'SwanDigitals Unified Conversations Inbox' : 'SwanDigitals Omnichannel Dashboard';
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
-                                            {sec.cards.map((card, idx) => (
-                                                <div 
-                                                    key={idx}
-                                                    className="reveal bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
-                                                >
-                                                    <div>
-                                                        <div className="w-10 h-10 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-500 mb-4">
-                                                            <Check className="w-5 h-5 font-bold" />
+                                    return (
+                                        <div key={sec.id} id={sec.id} className="scroll-mt-36">
+                                            <div className="reveal mb-10 text-center lg:text-left max-w-3xl">
+                                                <span className="inline-block px-3 py-1 bg-orange-100 border border-orange-200 text-orange-700 rounded-full text-xs font-extrabold uppercase mb-4 tracking-wider">
+                                                    {sec.badge}
+                                                </span>
+                                                <h2 className="text-3xl font-extrabold text-slate-900 mb-3">{sec.title}</h2>
+                                                <p className="text-slate-500 font-medium text-lg leading-relaxed">{sec.description}</p>
+                                            </div>
+
+                                            {hasImage ? (
+                                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                                    {/* Screenshot Mockup */}
+                                                    <div className="lg:col-span-6 reveal">
+                                                        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white group hover:border-orange-300 transition-all duration-300">
+                                                            <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-100 border-b border-slate-200">
+                                                                <div className="flex gap-1.5">
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                                                                </div>
+                                                                <div className="flex-1 mx-4">
+                                                                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-slate-400 font-mono border border-slate-200 text-center truncate">app.swandigitals.com</div>
+                                                                </div>
+                                                            </div>
+                                                            <img 
+                                                                src={imgSrc} 
+                                                                alt={imgAlt}
+                                                                className="w-full h-auto block transform group-hover:scale-[1.02] transition-transform duration-500"
+                                                                loading="lazy"
+                                                            />
                                                         </div>
-                                                        <h3 className="font-bold text-lg text-slate-900 mb-2">{card.title}</h3>
-                                                        <p className="text-sm text-slate-500 leading-relaxed">{card.desc}</p>
                                                     </div>
-                                                    
-                                                    {card.isLinkToVoice && (
-                                                        <button 
-                                                            onClick={() => handleProductChange('voicebot')}
-                                                            className="mt-6 text-xs font-bold text-orange-600 hover:text-orange-700 inline-flex items-center gap-1.5 group cursor-pointer self-start"
-                                                        >
-                                                            Go to Voice AI Features 
-                                                            <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-                                                        </button>
-                                                    )}
+
+                                                    {/* Cards Grid beside screenshot */}
+                                                    <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 stagger">
+                                                        {sec.cards.map((card, idx) => (
+                                                            <div 
+                                                                key={idx}
+                                                                className="reveal bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-lg hover:border-orange-200 transition-all duration-300 flex flex-col justify-between"
+                                                            >
+                                                                <div>
+                                                                    <div className="w-8 h-8 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-500 mb-3">
+                                                                        <Check className="w-4 h-4 font-bold" />
+                                                                    </div>
+                                                                    <h3 className="font-bold text-base text-slate-900 mb-1">{card.title}</h3>
+                                                                    <p className="text-xs text-slate-500 leading-relaxed">{card.desc}</p>
+                                                                </div>
+                                                                
+                                                                {card.isLinkToVoice && (
+                                                                    <button 
+                                                                        onClick={() => handleProductChange('voicebot')}
+                                                                        className="mt-4 text-xs font-bold text-orange-600 hover:text-orange-700 inline-flex items-center gap-1.5 group cursor-pointer self-start"
+                                                                    >
+                                                                        Go to Voice AI Features 
+                                                                        <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                                                                    </button>
+                                                                )}
+                                                            </div>
+                                                        ))}
+                                                    </div>
                                                 </div>
-                                            ))}
+                                            ) : (
+                                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+                                                    {sec.cards.map((card, idx) => (
+                                                        <div 
+                                                            key={idx}
+                                                            className="reveal bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                                                        >
+                                                            <div>
+                                                                <div className="w-10 h-10 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center text-orange-500 mb-4">
+                                                                    <Check className="w-5 h-5 font-bold" />
+                                                                </div>
+                                                                <h3 className="font-bold text-lg text-slate-900 mb-2">{card.title}</h3>
+                                                                <p className="text-sm text-slate-500 leading-relaxed">{card.desc}</p>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         ) : (
                             // VOICE AI DOM RENDER
                             <div className="space-y-24">
-                                {voiceSections.map((sec) => (
-                                    <div key={sec.id} id={sec.id} className="scroll-mt-36">
-                                        <div className="reveal mb-10 text-center lg:text-left max-w-3xl">
-                                            <span className="inline-block px-3 py-1 bg-purple-100 border border-purple-200 text-purple-700 rounded-full text-xs font-extrabold uppercase mb-4 tracking-wider">
-                                                {sec.badge}
-                                            </span>
-                                            <h2 className="text-3xl font-extrabold text-slate-900 mb-3">{sec.title}</h2>
-                                            <p className="text-slate-500 font-medium text-lg leading-relaxed">{sec.description}</p>
-                                        </div>
+                                {voiceSections.map((sec) => {
+                                    const voiceImages: Record<string, { src: string; alt: string }> = {
+                                        'how-it-works': { src: '/voicebot-overview.png', alt: 'SwanVoice AI Overview Dashboard' },
+                                        'outbound': { src: '/voicebot-make-call.png', alt: 'Place Outbound Call Interface' },
+                                        'agent-transfer': { src: '/voicebot-team-mgmt.png', alt: 'Team & On-Call Agent Management' },
+                                        'call-analytics': { src: '/voicebot-team.png', alt: 'AI Call Summary & Transcript' },
+                                        'integrations': { src: '/voicebot-agents-config.png', alt: 'Voice AI Agents Configuration' }
+                                    };
 
-                                        {/* SPECIAL HOW IT WORKS CALL FLOW VISUAL */}
-                                        {sec.isCallFlow && (
-                                            <div className="reveal bg-gradient-to-r from-purple-900 to-indigo-900 p-8 rounded-3xl text-white mb-10 border border-purple-800 shadow-lg">
-                                                <h3 className="font-bold text-xl mb-6 text-center tracking-wide uppercase text-purple-200">Interactive Call Flow</h3>
-                                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
-                                                    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                                                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">1</div>
-                                                        <h4 className="font-bold mb-2">Inbound / Outbound Trigger</h4>
-                                                        <p className="text-xs text-purple-200 leading-relaxed">Customer dials your dedicated number, or our campaign engine triggers an outbound call.</p>
+                                    const imageInfo = voiceImages[sec.id];
+
+                                    return (
+                                        <div key={sec.id} id={sec.id} className="scroll-mt-36">
+                                            <div className="reveal mb-10 text-center lg:text-left max-w-3xl">
+                                                <span className="inline-block px-3 py-1 bg-purple-100 border border-purple-200 text-purple-700 rounded-full text-xs font-extrabold uppercase mb-4 tracking-wider">
+                                                    {sec.badge}
+                                                </span>
+                                                <h2 className="text-3xl font-extrabold text-slate-900 mb-3">{sec.title}</h2>
+                                                <p className="text-slate-500 font-medium text-lg leading-relaxed">{sec.description}</p>
+                                            </div>
+
+                                            {/* SPECIAL HOW IT WORKS LAYOUT */}
+                                            {sec.id === 'how-it-works' && (
+                                                <div className="space-y-10 mb-10">
+                                                    {/* Clean Featured Dashboard Image */}
+                                                    <div className="reveal">
+                                                        <div className="relative max-w-4xl mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white group hover:border-purple-300 transition-all duration-300">
+                                                            <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-100 border-b border-slate-200">
+                                                                <div className="flex gap-1.5">
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                                                                </div>
+                                                                <div className="flex-1 mx-4">
+                                                                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-slate-400 font-mono border border-slate-200 text-center truncate">voice.swandigitals.com/dashboard</div>
+                                                                </div>
+                                                            </div>
+                                                            <img 
+                                                                src={imageInfo.src} 
+                                                                alt={imageInfo.alt}
+                                                                className="w-full h-auto block transform group-hover:scale-[1.01] transition-transform duration-500"
+                                                                loading="lazy"
+                                                            />
+                                                        </div>
                                                     </div>
-                                                    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                                                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">2</div>
-                                                        <h4 className="font-bold mb-2">Real-Time Processing</h4>
-                                                        <p className="text-xs text-purple-200 leading-relaxed">ASR converts audio to text, NLU decides context and intent, TTS synthesizes a natural-sounding response in real time.</p>
-                                                    </div>
-                                                    <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
-                                                        <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">3</div>
-                                                        <h4 className="font-bold mb-2">CRM Action & Sync</h4>
-                                                        <p className="text-xs text-purple-200 leading-relaxed">System logs outcomes, books calendars or transfers to live agents, and attaches post-call briefs.</p>
+
+                                                    {/* Interactive Call Flow Visual */}
+                                                    <div className="reveal bg-gradient-to-r from-purple-900 to-indigo-900 p-8 rounded-3xl text-white border border-purple-800 shadow-lg">
+                                                        <h3 className="font-bold text-xl mb-6 text-center tracking-wide uppercase text-purple-200">Interactive Call Flow</h3>
+                                                        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
+                                                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                                                                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">1</div>
+                                                                <h4 className="font-bold mb-2">Inbound / Outbound Trigger</h4>
+                                                                <p className="text-xs text-purple-200 leading-relaxed">Customer dials your dedicated number, or our campaign engine triggers an outbound call.</p>
+                                                            </div>
+                                                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                                                                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">2</div>
+                                                                <h4 className="font-bold mb-2">Real-Time Processing</h4>
+                                                                <p className="text-xs text-purple-200 leading-relaxed">ASR converts audio to text, NLU decides context and intent, TTS synthesizes a natural-sounding response in real time.</p>
+                                                            </div>
+                                                            <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
+                                                                <div className="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center font-bold text-white mb-4">3</div>
+                                                                <h4 className="font-bold mb-2">CRM Action & Sync</h4>
+                                                                <p className="text-xs text-purple-200 leading-relaxed">System logs outcomes, books calendars or transfers to live agents, and attaches post-call briefs.</p>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        )}
+                                            )}
 
-                                        {/* SPECIAL LANGUAGES GRID */}
-                                        {sec.isLanguagesGrid && (
-                                            <div className="reveal grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
-                                                {['English', 'Hindi', 'Marathi', 'Tamil', 'Telugu', 'Kannada', 'Gujarati', 'Bengali', 'Malayalam', 'Punjabi'].map((lang, idx) => (
-                                                    <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover:border-purple-300 transition-colors shadow-sm">
-                                                        <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mx-auto mb-2">
-                                                            <MessageSquare className="w-4 h-4" />
+                                            {/* SPECIAL LANGUAGES GRID */}
+                                            {sec.isLanguagesGrid && (
+                                                <div className="reveal grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-10">
+                                                    {['English', 'Hindi', 'Marathi', 'Tamil', 'Telugu', 'Kannada', 'Gujarati', 'Bengali', 'Malayalam', 'Punjabi'].map((lang, idx) => (
+                                                        <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover:border-purple-300 transition-colors shadow-sm">
+                                                            <div className="w-8 h-8 rounded-full bg-purple-50 flex items-center justify-center text-purple-600 mx-auto mb-2">
+                                                                <MessageSquare className="w-4 h-4" />
+                                                            </div>
+                                                            <span className="font-bold text-slate-800 text-xs">{lang}</span>
                                                         </div>
-                                                        <span className="font-bold text-slate-800 text-xs">{lang}</span>
+                                                    ))}
+                                                </div>
+                                            )}
+
+                                            {/* SECTIONS WITH SCREENSHOTS (2-COLUMN SPLIT) */}
+                                            {imageInfo && sec.id !== 'how-it-works' ? (
+                                                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                                                    {/* Screenshot Mockup (Alternates Left/Right side) */}
+                                                    <div className={`lg:col-span-6 reveal ${sec.id === 'agent-transfer' || sec.id === 'integrations' ? 'lg:order-2' : ''}`}>
+                                                        <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white group hover:border-purple-300 transition-all duration-300">
+                                                            <div className="flex items-center gap-2 px-4 py-2.5 bg-slate-100 border-b border-slate-200">
+                                                                <div className="flex gap-1.5">
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-amber-400" />
+                                                                    <div className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
+                                                                </div>
+                                                                <div className="flex-1 mx-4">
+                                                                    <div className="bg-white rounded-md px-3 py-0.5 text-[10px] text-slate-400 font-mono border border-slate-200 text-center truncate">voice.swandigitals.com</div>
+                                                                </div>
+                                                            </div>
+                                                            <img 
+                                                                src={imageInfo.src} 
+                                                                alt={imageInfo.alt}
+                                                                className="w-full h-auto block transform group-hover:scale-[1.02] transition-transform duration-500"
+                                                                loading="lazy"
+                                                            />
+                                                        </div>
                                                     </div>
-                                                ))}
-                                            </div>
-                                        )}
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
-                                            {sec.cards.map((card, idx) => (
-                                                <div 
-                                                    key={idx}
-                                                    className="reveal bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-xl hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
-                                                >
-                                                    <div>
-                                                        <div className="w-10 h-10 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-500 mb-4">
-                                                            <Check className="w-5 h-5 font-bold" />
-                                                        </div>
-                                                        <h3 className="font-bold text-lg text-slate-900 mb-2">{card.title}</h3>
-                                                        <p className="text-sm text-slate-500 leading-relaxed">{card.desc}</p>
+                                                    {/* Feature Cards Grid beside screenshot */}
+                                                    <div className={`lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 stagger ${sec.id === 'agent-transfer' || sec.id === 'integrations' ? 'lg:order-1' : ''}`}>
+                                                        {sec.cards.map((card, idx) => (
+                                                            <div 
+                                                                key={idx}
+                                                                className="reveal bg-white border border-slate-200 rounded-2xl p-5 hover:shadow-lg hover:border-purple-200 transition-all duration-300 flex flex-col justify-between"
+                                                            >
+                                                                <div>
+                                                                    <div className="w-8 h-8 rounded-xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-500 mb-3">
+                                                                        <Check className="w-4 h-4 font-bold" />
+                                                                    </div>
+                                                                    <h3 className="font-bold text-base text-slate-900 mb-1">{card.title}</h3>
+                                                                    <p className="text-xs text-slate-500 leading-relaxed">{card.desc}</p>
+                                                                </div>
+                                                            </div>
+                                                        ))}
                                                     </div>
                                                 </div>
-                                            ))}
+                                            ) : (
+                                                // SECTIONS WITHOUT SCREENSHOTS
+                                                sec.id !== 'how-it-works' && (
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger">
+                                                        {sec.cards.map((card, idx) => (
+                                                            <div 
+                                                                key={idx}
+                                                                className="reveal bg-white border border-slate-200 rounded-3xl p-6 hover:shadow-xl hover:border-purple-200 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between"
+                                                            >
+                                                                <div>
+                                                                    <div className="w-10 h-10 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center text-purple-500 mb-4">
+                                                                        <Check className="w-5 h-5 font-bold" />
+                                                                    </div>
+                                                                    <h3 className="font-bold text-lg text-slate-900 mb-2">{card.title}</h3>
+                                                                    <p className="text-sm text-slate-500 leading-relaxed">{card.desc}</p>
+                                                                </div>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
-                                    </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         )}
                     </div>

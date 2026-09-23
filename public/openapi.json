@@ -1,0 +1,41 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SwanDigitals AI Omnichannel & Voice Platform API",
+    "description": "API for managing chatbots, voice agents, vector RAG knowledge ingestion, and customer conversations.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://swandigitals.com/api"
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health Check Endpoint",
+        "responses": {
+          "200": {
+            "description": "API status online"
+          }
+        }
+      }
+    },
+    "/chatbots/query": {
+      "post": {
+        "summary": "Query Chatbot Knowledge Base",
+        "x-payment-info": {
+          "intent": "session",
+          "method": "stripe",
+          "amount": 0.05,
+          "currency": "USD"
+        },
+        "responses": {
+          "200": {
+            "description": "Chatbot response with confidence score"
+          }
+        }
+      }
+    }
+  }
+}

@@ -203,18 +203,20 @@ export default function LocationPageTemplate({
                         <div className="relative bg-slate-100 p-1.5 rounded-full flex w-80 border border-slate-200 shadow-inner">
                             {/* Sliding Background indicator using transform: translateX */}
                             <div 
-                                className="absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-slate-900 rounded-full transition-transform duration-300 ease-out"
+                                className="absolute top-1.5 bottom-1.5 left-1.5 w-[calc(50%-6px)] bg-slate-900 rounded-full transition-transform duration-300 ease-out pointer-events-none z-0"
                                 style={{ transform: `translateX(${activeTab === 'chat' ? '0%' : '100%'})` }}
                             />
                             <button 
+                                type="button"
                                 onClick={() => setActiveTab('chat')}
-                                className={`relative z-10 flex-1 py-2.5 text-xs font-semibold rounded-full transition-colors duration-200 ${activeTab === 'chat' ? 'text-white' : 'text-slate-500'}`}
+                                className={`relative z-10 flex-1 py-2.5 text-xs font-semibold rounded-full transition-colors duration-200 cursor-pointer ${activeTab === 'chat' ? 'text-white' : 'text-slate-500'}`}
                             >
                                 Text Chatbot
                             </button>
                             <button 
+                                type="button"
                                 onClick={() => setActiveTab('voice')}
-                                className={`relative z-10 flex-1 py-2.5 text-xs font-semibold rounded-full transition-colors duration-200 ${activeTab === 'voice' ? 'text-white' : 'text-slate-500'}`}
+                                className={`relative z-10 flex-1 py-2.5 text-xs font-semibold rounded-full transition-colors duration-200 cursor-pointer ${activeTab === 'voice' ? 'text-white' : 'text-slate-500'}`}
                             >
                                 Voicebot Agent
                             </button>

@@ -1,0 +1,11 @@
+{
+  "serverInfo": {
+    "name": "SwanDigitals AI Platform MCP Server",
+    "version": "1.0.0",
+    "description": "Model Context Protocol server for SwanDigitals omnichannel chatbot, voice AI agent, and vector RAG ingestion."
+  },
+  "transport": {
+    "type": "sse",
+    "url": "https://swandigitals.com/api/mcp/sse"
+  }
+}

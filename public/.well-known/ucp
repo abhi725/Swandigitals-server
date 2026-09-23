@@ -1,0 +1,12 @@
+{
+  "ucp_version": "1.0.0",
+  "services": {
+    "support": "https://swandigitals.com/solutions/customer-service",
+    "checkout": "https://swandigitals.com/pricing"
+  },
+  "capabilities": [
+    "automated_ticket_resolution",
+    "voice_agent_dispatch",
+    "vernacular_nlu"
+  ]
+}
