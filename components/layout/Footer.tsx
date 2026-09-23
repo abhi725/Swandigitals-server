@@ -54,12 +54,12 @@ export default function Footer() {
                         <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Platform</h3>
                         <ul className="space-y-2.5">
                             {[
-                                { label: 'Overview', href: '/platform' },
-                                { label: 'Features', href: '/features' },
-                                { label: 'Voice AI Agent', href: '/build-ai-voice-agent' },
-                                { label: 'Integrations', href: '/integrations' },
-                                { label: 'Security', href: '/security' },
-                                { label: 'Deployment', href: '/deployment' },
+                                { label: 'Overview', href: '/platform#overview' },
+                                { label: 'Features Catalog', href: '/features' },
+                                { label: 'Voice AI Agent', href: '/features?product=voicebot#how-it-works' },
+                                { label: 'Integrations', href: '/integrations#channels' },
+                                { label: 'Security & DPDP', href: '/security#dpdp-compliance' },
+                                { label: 'Deployment Options', href: '/deployment#options' },
                             ].map(({ label, href }) => (
                                 <li key={href}>
                                     <Link href={href} className="text-sm text-slate-500 hover:text-orange-600 transition-colors">
@@ -75,12 +75,12 @@ export default function Footer() {
                         <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Solutions</h3>
                         <ul className="space-y-2.5">
                             {[
-                                { label: 'Customer Service', href: '/solutions/customer-service' },
-                                { label: 'IT Helpdesk', href: '/solutions/it-helpdesk' },
-                                { label: 'Banking & BFSI', href: '/solutions/banking' },
-                                { label: 'Insurance', href: '/solutions/insurance' },
-                                { label: 'Healthcare', href: '/solutions/healthcare' },
-                                { label: 'Overview', href: '/solutions' },
+                                { label: 'Customer Service', href: '/solutions/customer-service#modules' },
+                                { label: 'IT Helpdesk', href: '/solutions/it-helpdesk#automation' },
+                                { label: 'Banking & BFSI', href: '/solutions/banking#use-cases' },
+                                { label: 'Insurance', href: '/solutions/insurance#claims' },
+                                { label: 'Healthcare', href: '/solutions/healthcare#use-cases' },
+                                { label: 'Solutions Matrix', href: '/solutions#products' },
                             ].map(({ label, href }) => (
                                 <li key={href}>
                                     <Link href={href} className="text-sm text-slate-500 hover:text-orange-600 transition-colors">
@@ -119,13 +119,13 @@ export default function Footer() {
                             {[
                                 { label: 'Documentation', href: '/documentation' },
                                 { label: 'Blog', href: 'https://blog.swandigitals.com', external: true },
-                                { label: 'ROI Calculator', href: '/roi-calculator' },
-                                { label: 'FAQs', href: '/faqs' },
-                                { label: 'Why SwanDigitals', href: '/why-swandigitals' },
-                                { label: 'Pricing', href: '/pricing' },
-                                { label: 'Demo', href: '/demo' },
+                                { label: 'ROI Calculator', href: '/roi-calculator#calculator' },
+                                { label: 'FAQs Knowledge Base', href: '/faqs#general-platform' },
+                                { label: 'Why SwanDigitals', href: '/why-swandigitals#comparison' },
+                                { label: 'Pricing Plans', href: '/pricing#plans' },
+                                { label: 'Book Demo', href: '/demo' },
                                 { label: 'About Us', href: '/about' },
-                                { label: 'Contact Us', href: '/contact' },
+                                { label: 'Contact Support', href: '/contact' },
                             ].map(({ label, href, external }) => (
                                 <li key={href}>
                                     {external ? (
