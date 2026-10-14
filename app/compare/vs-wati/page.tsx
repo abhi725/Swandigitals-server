@@ -36,7 +36,7 @@ export default function VsWatiPage() {
             ]}
             comparisonRows={[
                 { feature: "Channels Supported", SwanDigitals: "WhatsApp, Facebook, Web, Voice", competitor: "WhatsApp Only" },
-                { feature: "Pricing Model", SwanDigitals: "Flat Rupee Plans (from ₹4,999)", competitor: "Per-Conversation Tiers" },
+                { feature: "Pricing Model", SwanDigitals: "Flat Rupee Plans (from ₹1,999)", competitor: "Per-Conversation Tiers" },
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/menu/docs", competitor: "Basic / Add-on" },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
                 { feature: "Indian Languages", SwanDigitals: "10 Indian languages", competitor: "Limited" },

@@ -75,6 +75,8 @@ export default function Footer() {
                         <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4">Solutions</h3>
                         <ul className="space-y-2.5">
                             {[
+                                { label: 'Real Estate & Builders', href: '/solutions/real-estate' },
+                                { label: 'Restaurants & QSR', href: '/solutions/restaurants' },
                                 { label: 'Customer Service', href: '/solutions/customer-service#modules' },
                                 { label: 'IT Helpdesk', href: '/solutions/it-helpdesk#automation' },
                                 { label: 'Banking & BFSI', href: '/solutions/banking#use-cases' },

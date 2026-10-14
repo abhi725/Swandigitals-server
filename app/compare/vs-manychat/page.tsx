@@ -39,7 +39,7 @@ export default function VsManyChatPage() {
                 { feature: "Data Hosted in India", SwanDigitals: true, competitor: false },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/menu/docs", competitor: "Manual Flow Builder" },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-Contact Tiers" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-Contact Tiers" }
             ]}
             targetPersona="you are a creator or agency running Instagram and Facebook giveaways or comment-to-DM flows — ManyChat's visual builder is excellent for that."
             verdict="you are an Indian SME that wants WhatsApp, Facebook, web chat and +91 AI calling in one inbox, 10 Indian languages, and flat rupee pricing with no per-message markup."

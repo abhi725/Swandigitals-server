@@ -23,7 +23,7 @@ export default function VsHaptikPage() {
             comparisonRows={[
                 { feature: "Platform Scope", SwanDigitals: "Unified chat + voice inbox", competitor: "Broad enterprise AI suite" },
                 { feature: "Voice AI", SwanDigitals: "Native (+91 calls)", competitor: "Limited/Third-party" },
-                { feature: "Pricing Model", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Enterprise / usage based" },
+                { feature: "Pricing Model", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Enterprise / usage based" },
                 { feature: "Best Fit", SwanDigitals: "Indian SMEs", competitor: "Large enterprises" },
                 { feature: "Implementation", SwanDigitals: "Live in days", competitor: "Weeks to Months" }
             ]}
@@ -38,7 +38,7 @@ export default function VsHaptikPage() {
                 },
                 {
                     title: "Predictable SME Pricing",
-                    description: "Flat rupee plans from ₹4,999/mo through Razorpay, with no per-message markup and fast go-live."
+                    description: "Flat rupee plans from ₹1,999/mo through Razorpay, with no per-message markup and fast go-live."
                 }
             ]}
             targetPersona="You are a large enterprise with a dedicated team and complex, custom conversational projects that need heavy enterprise tooling."

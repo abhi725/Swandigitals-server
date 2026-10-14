@@ -38,7 +38,7 @@ export default function VsCrispPage() {
                 { feature: "Data Hosting", SwanDigitals: "Hosted in India", competitor: "Europe / Global" },
                 { feature: "Main Focus", SwanDigitals: "AI + human, chat + voice", competitor: "Human Agent Inbox" },
                 { feature: "Voice AI Features", SwanDigitals: "Native (+91 calls)", competitor: "None" },
-                { feature: "Pricing Model", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Flat Pricing" },
+                { feature: "Pricing Model", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Flat Pricing" },
                 { feature: "Indian Languages", SwanDigitals: "10 Indian languages", competitor: "Plugin-based translation" }
             ]}
             targetPersona="You are a tiny team that just wants a light, cheap shared inbox for a few people to answer support chats manually."

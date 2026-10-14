@@ -6,7 +6,7 @@ import {
     ArrowRight, Menu, X, ChevronDown, Cpu, Sparkles, 
     Network, Shield, Headphones, Briefcase, Landmark, 
     FileText, Activity, Layers, BookOpen, Calculator, 
-    GitCompare, PhoneCall, ExternalLink, Bot
+    GitCompare, PhoneCall, ExternalLink, Bot, Utensils, Building2
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
@@ -28,6 +28,8 @@ const navItems = [
         href: '/solutions',
         children: [
             { label: 'Solutions Matrix', href: '/solutions#products', icon: <Bot className="w-4 h-4 text-orange-500" /> },
+            { label: 'Real Estate & Builders', href: '/solutions/real-estate', icon: <Building2 className="w-4 h-4 text-orange-500" /> },
+            { label: 'Restaurants & QSR', href: '/solutions/restaurants', icon: <Utensils className="w-4 h-4 text-orange-500" /> },
             { label: 'Customer Service', href: '/solutions/customer-service#modules', icon: <Headphones className="w-4 h-4 text-orange-500" /> },
             { label: 'IT Helpdesk', href: '/solutions/it-helpdesk#automation', icon: <Briefcase className="w-4 h-4 text-orange-500" /> },
             { label: 'Banking & BFSI', href: '/solutions/banking#use-cases', icon: <Landmark className="w-4 h-4 text-orange-500" /> },

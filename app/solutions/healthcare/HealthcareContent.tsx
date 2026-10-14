@@ -644,13 +644,37 @@ export default function HealthcareContent() {
 
           {activeProduct === 'chatbot' ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Free */}
+              <div className="bg-white border border-stone-200 p-8 rounded-2xl text-left flex flex-col justify-between">
+                <div>
+                  <div className="text-lg font-bold text-slate-800 mb-4">Free</div>
+                  <div className="flex items-baseline mb-4">
+                    <span className="text-2xl font-semibold">₹</span>
+                    <span className="text-4xl font-extrabold text-slate-950">0</span>
+                    <span className="text-slate-500 text-sm ml-1">forever</span>
+                  </div>
+                  <p className="text-slate-500 text-sm mb-6">For clinics getting started with website live chat</p>
+                  <ul className="space-y-3.5 text-sm text-slate-600 border-t border-slate-100 pt-6">
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Website Live Chat Widget</li>
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Conversations: Unlimited</li>
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> 1 Human Agent Seat</li>
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> CRM Sync (HubSpot, Webhooks)</li>
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Basic Lead Capture Forms</li>
+                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Standard Email Support</li>
+                  </ul>
+                </div>
+                <a href="https://chat.swandigitals.com" target="_blank" rel="noopener noreferrer" className="w-full mt-8 py-3 px-4 border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl font-bold text-center transition-colors">
+                  Start Free
+                </a>
+              </div>
+
               {/* Growth Hub */}
               <div className="bg-white border border-stone-200 p-8 rounded-2xl text-left flex flex-col justify-between">
                 <div>
                   <div className="text-lg font-bold text-slate-800 mb-4">Growth Hub</div>
                   <div className="flex items-baseline mb-4">
                     <span className="text-2xl font-semibold">₹</span>
-                    <span className="text-4xl font-extrabold text-slate-950">4,999</span>
+                    <span className="text-4xl font-extrabold text-slate-950">1,999</span>
                     <span className="text-slate-500 text-sm ml-1">/month</span>
                   </div>
                   <p className="text-slate-500 text-sm mb-6">Perfect for solo practitioners &amp; small clinics</p>
@@ -677,7 +701,7 @@ export default function HealthcareContent() {
                   <div className="text-lg font-bold text-slate-800 mb-4">Performance Pro</div>
                   <div className="flex items-baseline mb-4">
                     <span className="text-2xl font-semibold">₹</span>
-                    <span className="text-4xl font-extrabold text-slate-950">9,999</span>
+                    <span className="text-4xl font-extrabold text-slate-950">4,999</span>
                     <span className="text-slate-500 text-sm ml-1">/month</span>
                   </div>
                   <p className="text-slate-500 text-sm mb-6">For busy multi-doctor clinics &amp; diagnostic centres</p>
@@ -692,30 +716,6 @@ export default function HealthcareContent() {
                 </div>
                 <Link href="#cta" className="w-full mt-8 py-3.5 px-4 bg-orange-600 hover:bg-orange-700 text-white rounded-xl font-bold text-center shadow-md shadow-orange-500/10 transition-colors">
                   Start Free Trial
-                </Link>
-              </div>
-
-              {/* Scale */}
-              <div className="bg-white border border-stone-200 p-8 rounded-2xl text-left flex flex-col justify-between">
-                <div>
-                  <div className="text-lg font-bold text-slate-800 mb-4">Scale</div>
-                  <div className="flex items-baseline mb-4">
-                    <span className="text-2xl font-semibold">₹</span>
-                    <span className="text-4xl font-extrabold text-slate-950">45,000+</span>
-                    <span className="text-slate-500 text-sm ml-1">/month</span>
-                  </div>
-                  <p className="text-slate-500 text-sm mb-6">Hospital chains, polyclinics &amp; healthcare groups</p>
-                  <ul className="space-y-3.5 text-sm text-slate-600 border-t border-slate-100 pt-6">
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Multi-location rollout support</li>
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Custom workflows via n8n</li>
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> DPDP-2023 aware, data hosted in India</li>
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Priority WhatsApp &amp; onboarding support</li>
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Custom AI persona per branch</li>
-                    <li className="flex items-center gap-2.5"><Check className="w-4.5 h-4.5 text-emerald-500" /> Dedicated Solutions Engineer</li>
-                  </ul>
-                </div>
-                <Link href="/contact" className="w-full mt-8 py-3 px-4 border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl font-bold text-center transition-colors">
-                  Contact Sales
                 </Link>
               </div>
             </div>

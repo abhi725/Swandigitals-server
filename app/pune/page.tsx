@@ -30,7 +30,7 @@ export default function PunePage() {
         }
     ];
 
-    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "24/7", "label": "Instant Support"}, {"value": "Fast", "label": "Response Time"}, {"value": "₹4,999", "label": "Starting Plan"}];
+    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "24/7", "label": "Instant Support"}, {"value": "Fast", "label": "Response Time"}, {"value": "₹1,999", "label": "Starting Plan"}];
 
     return (
         <LocationPageTemplate

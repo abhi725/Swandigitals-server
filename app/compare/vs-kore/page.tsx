@@ -22,7 +22,7 @@ export default function VsKorePage() {
             realityCheck="Kore.ai needs significant IT resources, developer training and long deployment cycles, which is a lot to ask of a small or mid-sized Indian business. SwanDigitals is an out-of-the-box, fully managed platform that goes live in days, and your team makes updates instantly in a no-code builder. Where Kore.ai may fit better: large enterprises with dedicated dev teams and complex, industry-specific requirements."
             comparisonRows={[
                 { feature: "Deployment Time", SwanDigitals: "Live in days", competitor: "3-6 Months" },
-                { feature: "Pricing Structure", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Complex usage tiers" },
+                { feature: "Pricing Structure", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Complex usage tiers" },
                 { feature: "Developer Required", SwanDigitals: "No (Fully Managed)", competitor: "Yes (Heavy IT reliance)" },
                 { feature: "Data Hosting", SwanDigitals: "Hosted in India", competitor: "Global cloud / VPC" },
                 { feature: "Indian Languages", SwanDigitals: "10 Indian languages", competitor: "Translation layer" }

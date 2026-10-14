@@ -39,7 +39,7 @@ export default function Vs360dialogPage() {
                 { feature: "Setup Time", SwanDigitals: "Live in Days", competitor: "Months of Custom Dev" },
                 { feature: "Coding Required", SwanDigitals: "None (No-Code)", competitor: "High (Full Dev Team Needed)" },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-Message Usage" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-Message Usage" }
             ]}
             targetPersona="you have a developer team that wants to build a fully custom, proprietary chat tool on raw WhatsApp API — 360dialog is a solid BSP for that."
             verdict="you are an Indian SME that wants a ready inbox with WhatsApp, Facebook, web chat and +91 AI calling, 10 Indian languages, and flat rupee pricing with no per-message markup."

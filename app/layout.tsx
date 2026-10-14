@@ -126,9 +126,9 @@ export default function RootLayout({
                     '@type': 'OfferCatalog',
                     name: 'SwanDigitals AI Platform Plans',
                     itemListElement: [
-                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Growth Hub', description: 'AI-powered inbox for growing Indian businesses' } },
-                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Performance Pro', description: 'Advanced AI chat + voice for scaling SMEs' } },
-                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Scale', description: 'Higher volumes and multi-location businesses, data hosted in India' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Free', description: 'Free website chat widget with basic CRM integration' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Growth Hub', description: 'Flat-rate AI chatbot for startups and growing Indian businesses' } },
+                        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Performance Pro', description: 'Full omnichannel AI chatbot platform with visual flow builder' } },
                     ],
                 },
                 sameAs: [
@@ -194,8 +194,8 @@ export default function RootLayout({
                 applicationCategory: 'BusinessApplication',
                 offers: {
                     '@type': 'AggregateOffer',
-                    lowPrice: '4999',
-                    highPrice: '45000',
+                    lowPrice: '0',
+                    highPrice: '4999',
                     priceCurrency: 'INR',
                     offerCount: '3',
                 },

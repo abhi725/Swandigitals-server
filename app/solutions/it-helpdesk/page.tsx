@@ -1,147 +1,91 @@
 import type { Metadata } from 'next';
-
-
-import SiteLayout from '@/components/layout/SiteLayout';
-import Hero from '@/components/ui/Hero';
-import Link from 'next/link';
-import { Key, Monitor, Wifi, HelpCircle, Settings, Ticket, Check } from 'lucide-react';
+import ITHelpdeskContent from './ITHelpdeskContent';
 
 export const metadata: Metadata = {
-    title: 'AI IT Helpdesk Chatbot for Indian SMEs',
-    description: 'Automate password resets, software access requests, and common IT troubleshooting for your growing team — on WhatsApp or web chat.',
-    keywords: ['IT Helpdesk Automation', 'IT Support Chatbot India', 'Password Reset Bot', 'SME IT Support AI', 'Internal Helpdesk Chatbot'],
+    title: 'AI Documentation & IT Helpdesk Chatbot | SwanDigitals India',
+    description: 'Turn your product manuals, setup guides, and troubleshooting SOPs into a 24/7 AI support assistant. Answers repetitive customer and employee technical questions directly from your approved docs.',
+    keywords: [
+        'AI documentation chatbot',
+        'knowledge base chatbot India',
+        'technical support chatbot',
+        'product manual AI bot',
+        'IT helpdesk automation India',
+        'troubleshooting guide chatbot',
+        'customer support doc bot',
+    ],
     alternates: {
         canonical: 'https://swandigitals.com/solutions/it-helpdesk',
     },
-}
+    openGraph: {
+        title: 'Documentation-Driven AI Technical Support & IT Helpdesk | SwanDigitals',
+        description: 'Connect your product docs and SOPs. Deliver instant, accurate technical answers with exact section citations on Web and WhatsApp.',
+        url: 'https://swandigitals.com/solutions/it-helpdesk',
+    },
+};
 
 export default function ITHelpdeskPage() {
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://swandigitals.com'
-            },
-            {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Solutions',
-                item: 'https://swandigitals.com/solutions'
-            },
-            {
-                '@type': 'ListItem',
-                position: 3,
-                name: 'IT Helpdesk',
-                item: 'https://swandigitals.com/solutions/it-helpdesk'
-            }
-        ]
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://swandigitals.com' },
+            { '@type': 'ListItem', position: 2, name: 'Solutions', item: 'https://swandigitals.com/solutions' },
+            { '@type': 'ListItem', position: 3, name: 'IT Helpdesk & Tech Docs', item: 'https://swandigitals.com/solutions/it-helpdesk' },
+        ],
     };
 
-    const useCases = [
-        { icon: <Key className="w-6 h-6" />, title: "Password Resets", desc: "Self-service password reset with identity verification", stat: "Fast turnaround" },
-        { icon: <Monitor className="w-6 h-6" />, title: "Software Requests", desc: "Request, approve, and provision software automatically", stat: "Mostly automated" },
-        { icon: <Wifi className="w-6 h-6" />, title: "Connectivity Issues", desc: "Troubleshoot network, VPN, and connectivity problems", stat: "First-line support" },
-        { icon: <Ticket className="w-6 h-6" />, title: "Ticket Creation", desc: "Create and route tickets to the right team automatically", stat: "Smart routing" },
-        { icon: <Settings className="w-6 h-6" />, title: "Hardware Support", desc: "Request equipment, report issues, track repairs", stat: "Full lifecycle" },
-        { icon: <HelpCircle className="w-6 h-6" />, title: "KB Search", desc: "Instant answers from your knowledge base and docs", stat: "AI-powered" }
-    ];
-
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'What documentation does the AI need to get trained?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The AI works directly from your existing materials. You can upload user manuals, troubleshooting guides, setup SOPs, FAQ documents, or provide links to your online documentation portal. Supported formats include PDF, DOCX, TXT, and web URLs.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'What if our product documentation updates frequently?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Updating the knowledge base takes just a minute. Simply upload the new document version or click refresh on your documentation URL. The AI immediately uses the latest information for subsequent questions.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Will the AI make up answers if something is not in our docs?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'No. SwanDigitals is configured with strict retrieval grounding. If a customer asks a question that is not covered in your uploaded documentation, the AI clearly states that it does not have that information and offers to connect them with your human support team.',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'Can this help both our customers and our internal team?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. Many companies use it for customer technical support (product FAQs, setup guides, troubleshooting steps) and also have an internal knowledge bot for employees (company IT policies, VPN setup, onboarding guides, leave policies).',
+                },
+            },
+            {
+                '@type': 'Question',
+                name: 'How does the bot hand over to human agents when an issue is too complex?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'When a question is not in the docs or the user requests to speak with a human, the bot collects their name, contact details, and a summary of their issue. It then forwards the ticket to your team via email, webhook, or HubSpot CRM.',
+                },
+            },
+        ],
+    };
 
     return (
-        <SiteLayout>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
-            <Hero
-                badge="🔧 IT Helpdesk"
-                title="IT Helpdesk Automation for Growing Teams"
-                subtitle="Password resets, software requests, and connectivity troubleshooting—automated 24/7. Free up your IT person to focus on what matters."
-                primaryCTA={{ text: "See IT Demo", href: "/demo" }}
-                secondaryCTA={{ text: "View Employee Experience", href: "/solutions/employee-experience" }}
-            />
-
-            {/* Stats */}
-            <section className="py-16 bg-gradient-to-r from-slate-700 to-slate-900 text-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                        <div><div className="text-4xl font-bold">Faster</div><div className="text-white/80">Ticket Resolution</div></div>
-                        <div><div className="text-4xl font-bold">Fast</div><div className="text-white/80">Password Reset</div></div>
-                        <div><div className="text-4xl font-bold">24/7</div><div className="text-white/80">Availability</div></div>
-                        <div><div className="text-4xl font-bold">Reduced</div><div className="text-white/80">IT Workload</div></div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Use Cases */}
-            <section className="py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">IT Helpdesk Use Cases</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {useCases.map((uc, i) => (
-                            <div key={i} className="p-6 border-2 border-slate-200 rounded-xl hover:border-slate-400 transition-colors">
-                                <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-700 mb-4">
-                                    {uc.icon}
-                                </div>
-                                <h3 className="text-lg font-bold mb-2">{uc.title}</h3>
-                                <p className="text-slate-600 mb-4">{uc.desc}</p>
-                                <span className="text-sm bg-slate-100 text-slate-700 px-3 py-1 rounded-full">{uc.stat}</span>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Integration Partners */}
-            <section className="py-20 bg-slate-50">
-                <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold mb-12">Works With Your Tools</h2>
-                    <div className="flex flex-wrap gap-4 justify-center">
-                        {['WhatsApp', 'Facebook Messenger', 'Web Chat', 'HubSpot', 'Calendly', 'Razorpay', 'Mautic', 'n8n'].map((partner, i) => (
-                            <span key={i} className="px-6 py-3 bg-white rounded-full font-medium shadow-sm">{partner}</span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Benefits */}
-            <section className="py-20 bg-white">
-                <div className="max-w-4xl mx-auto px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">Why IT Teams Love SwanDigitals</h2>
-                    <div className="space-y-6">
-                        {[
-                            { title: "Deflect Most Tier-1 Tickets", desc: "Common issues like password resets and software questions handled automatically" },
-                            { title: "24/7 First-Line Support", desc: "Employees get help anytime without waiting for business hours" },
-                            { title: "Knowledge Base Integration", desc: "AI searches your docs and provides accurate answers instantly" },
-                            { title: "Smart Escalation", desc: "Complex issues routed to the right team with full troubleshooting context" },
-                            { title: "Continuous Learning", desc: "AI improves from every interaction, getting smarter over time" }
-                        ].map((benefit, i) => (
-                            <div key={i} className="flex gap-4 items-start bg-slate-50 p-6 rounded-xl">
-                                <Check className="text-green-600 w-6 h-6 shrink-0 mt-0.5" />
-                                <div>
-                                    <h3 className="font-bold mb-1">{benefit.title}</h3>
-                                    <p className="text-slate-600">{benefit.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-                <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-                    <h2 className="text-4xl font-bold mb-6">Ready to Automate IT Support?</h2>
-                    <p className="text-xl text-white/80 mb-8">See how we can automate most of your Tier-1 IT tickets</p>
-                    <Link href="/demo" className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-full font-semibold text-lg shadow-xl hover:scale-105 transition-all">
-                        Get IT Helpdesk Demo
-                    </Link>
-                </div>
-            </section>
-        </SiteLayout>
+        <>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <ITHelpdeskContent />
+        </>
     );
 }

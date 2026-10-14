@@ -21,7 +21,7 @@ export default function VsIntercomPage() {
             competitorStrengths="A highly polished interface, intuitive product-tour widgets, and strong proactive messaging."
             realityCheck="Intercom charges per seat, per person reached and per automated answer, so as your traffic grows your bill climbs unpredictably, which is hard for a small or mid-sized Indian business. SwanDigitals gives you a flat rupee plan with chat and +91 voice in one inbox. Where Intercom may fit better: well-funded global SaaS companies focused on in-app product tours and onboarding."
             comparisonRows={[
-                { feature: "Pricing Model", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per Seat + AI Fees" },
+                { feature: "Pricing Model", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per Seat + AI Fees" },
                 { feature: "Best Fit", SwanDigitals: "Indian SMEs", competitor: "Global / US SaaS" },
                 { feature: "WhatsApp API", SwanDigitals: "Native & Deep", competitor: "Basic Integration" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Not available" },

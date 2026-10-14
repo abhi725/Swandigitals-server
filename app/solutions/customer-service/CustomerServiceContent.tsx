@@ -183,6 +183,12 @@ const CSS = `
   .wave-bar-3 { animation: waveChat 1s ease-in-out infinite 0.3s; }
   .wave-bar-4 { animation: waveChat 1s ease-in-out infinite 0.45s; }
   .wave-bar-5 { animation: waveChat 1s ease-in-out infinite 0.6s; }
+
+  /* Industry tab dynamic card */
+  .industry-card-fade {
+    animation: fadeIn 0.35s ease forwards;
+    opacity: 1;
+  }
 `;
 
 /* ─────────────────────────── useReveal HOOK ─────────────────────────── */
@@ -725,7 +731,7 @@ export default function CustomerServiceContent() {
                 </section>
 
                 {/* ══════════════ FEATURE TABS ══════════════ */}
-                <section className="py-24 bg-slate-50 border-b border-slate-200" data-reveal-section>
+                <section id="modules" className="py-24 bg-slate-50 border-b border-slate-200 scroll-mt-20" data-reveal-section>
                     <div className="max-w-7xl mx-auto px-6 lg:px-8">
                         <div className="text-center max-w-2xl mx-auto mb-12">
                             <p className="cs-reveal text-xs font-extrabold uppercase tracking-widest text-orange-600 mb-3">Platform Modules</p>
@@ -938,7 +944,7 @@ export default function CustomerServiceContent() {
                 </section>
 
                 {/* ══════════════ INDUSTRY USE CASES ══════════════ */}
-                <section className="py-24 bg-slate-950 border-b border-slate-800 relative overflow-hidden" data-reveal-section>
+                <section id="industries" className="py-24 bg-slate-950 border-b border-slate-800 relative overflow-hidden scroll-mt-20" data-reveal-section>
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-orange-500/40 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/40 to-transparent" />
                     <div className="absolute top-1/3 right-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -962,10 +968,11 @@ export default function CustomerServiceContent() {
                                 {industries.map((ind, i) => (
                                     <button
                                         key={ind.id}
+                                        type="button"
                                         onClick={() => setActiveIndustry(i)}
                                         className={`flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                                             activeIndustry === i
-                                                ? 'bg-white text-slate-900 shadow-md'
+                                                ? 'bg-white text-slate-900 shadow-md scale-105'
                                                 : 'text-slate-400 hover:text-white hover:bg-slate-800'
                                         }`}
                                     >
@@ -978,7 +985,7 @@ export default function CustomerServiceContent() {
 
                         {/* Active Industry Card */}
                         {industries.map((ind, i) => i === activeIndustry && (
-                            <div key={ind.id} className="cs-reveal">
+                            <div key={ind.id} className="industry-card-fade">
                                 {/* Headline */}
                                 <div className="text-center mb-10">
                                     <span className={`inline-block px-4 py-2 rounded-full text-xs font-black uppercase tracking-widest text-white bg-gradient-to-r ${ind.color} shadow-lg mb-4`}>

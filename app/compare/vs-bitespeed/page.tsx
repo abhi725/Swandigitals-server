@@ -31,7 +31,7 @@ export default function VsBiteSpeedPage() {
                 },
                 {
                     title: "Flat Rupee Pricing",
-                    description: "Avoid tiered billing or subscriber-limit penalties. Pay a flat plan from ₹4,999/mo with no per-message markup."
+                    description: "Avoid tiered billing or subscriber-limit penalties. Pay a flat plan from ₹1,999/mo with no per-message markup."
                 }
             ]}
             comparisonRows={[

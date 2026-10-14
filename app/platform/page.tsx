@@ -29,7 +29,7 @@ export default function PlatformPage() {
     ];
 
     const comparisonData = [
-        { feature: 'Pricing', swan: 'Flat ₹ pricing from ₹4,999/mo', competitor: 'Custom enterprise quotes' },
+        { feature: 'Pricing', swan: 'Flat ₹ pricing from ₹1,999/mo (Free plan available)', competitor: 'Custom enterprise quotes' },
         { feature: 'Data Location', swan: 'Hosted in India, DPDP-2023 aware', competitor: 'Varies by deployment region' },
         { feature: 'Time to Go Live', swan: 'Live in as little as 7 days', competitor: 'Multi-month enterprise rollout' },
         { feature: 'Support', swan: 'Indian team, Indian support hours', competitor: 'Enterprise account management' },

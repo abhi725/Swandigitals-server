@@ -28,12 +28,31 @@ export default function PricingContentWrapper() {
 
     const chatbotPlans = [
         {
+            name: "Free",
+            price: "₹0",
+            period: "forever",
+            description: "For individuals & businesses getting started with website live chat.",
+            badge: null,
+            icon: <MessageSquare className="w-6 h-6 text-orange-600" />,
+            features: [
+                "Website Live Chat Widget",
+                "Conversations & Sessions: Unlimited",
+                "Human Agent Seat: 1 Agent",
+                "CRM Integration (HubSpot, Webhooks)",
+                "Basic Lead Capture & Contact Forms",
+                "Standard Email Support"
+            ],
+            exclusion: "Excludes AI auto-reply, WhatsApp / Omnichannel presence, and custom integrations.",
+            cta: "Start Free",
+            ctaLink: "https://chat.swandigitals.com"
+        },
+        {
             name: "Growth Hub",
-            price: "₹4,999",
+            price: "₹1,999",
             period: "/month",
             description: "For D2C brands, retailers & early startups.",
             badge: null,
-            icon: <MessageSquare className="w-6 h-6 text-orange-600" />,
+            icon: <Zap className="w-6 h-6 text-orange-600" />,
             features: [
                 "Conversations & Sessions: Unlimited",
                 "Human Agent Seats: Unlimited",
@@ -49,11 +68,11 @@ export default function PricingContentWrapper() {
         },
         {
             name: "Performance Pro",
-            price: "₹9,999",
+            price: "₹4,999",
             period: "/month",
             description: "For marketing teams, lead-gen pipelines & active support desks.",
             badge: "MOST POPULAR",
-            icon: <Zap className="w-6 h-6 text-orange-600" />,
+            icon: <Shield className="w-6 h-6 text-orange-600" />,
             features: [
                 "Everything in Growth Hub, plus:",
                 "All Channels: WhatsApp, Web, Email, Instagram, Telegram, Facebook, SMS",
@@ -70,27 +89,6 @@ export default function PricingContentWrapper() {
             cta: "Activate Performance Pro",
             ctaLink: "/demo",
             highlighted: true
-        },
-        {
-            name: "Scale",
-            price: "₹45,000+",
-            period: "/month",
-            description: "For higher volumes & multi-location businesses.",
-            badge: "HIGH VOLUME",
-            icon: <Shield className="w-6 h-6 text-orange-600" />,
-            features: [
-                "Everything in Performance Pro, plus:",
-                "Higher call & message volume limits",
-                "Multi-location / multi-branch setup",
-                "Data hosted in India (DPDP 2023 aware)",
-                "Custom CRM / ERP integrations (on request)",
-                "Custom onboarding & agent training",
-                "Meta Fees: 0% Markup Direct Trunking",
-                "Support: Priority + named account manager"
-            ],
-            exclusion: "Custom integrations beyond standard scope subject to scoping.",
-            cta: "Talk to Sales",
-            ctaLink: "/contact"
         }
     ];
 
@@ -286,6 +284,8 @@ export default function PricingContentWrapper() {
                                         </p>
                                         <Link 
                                             href={plan.ctaLink} 
+                                            target={plan.ctaLink.startsWith('http') ? '_blank' : undefined}
+                                            rel={plan.ctaLink.startsWith('http') ? 'noopener noreferrer' : undefined}
                                             className={`w-full block text-center py-3.5 px-6 rounded-xl font-bold text-sm shadow-md transition-all ${
                                                 plan.highlighted 
                                                     ? 'bg-orange-500 hover:bg-orange-600 text-white' 
@@ -412,12 +412,30 @@ export default function PricingContentWrapper() {
                                     <thead>
                                         <tr className="border-b-2 border-slate-100 text-slate-400 uppercase tracking-widest text-[10px] font-bold">
                                             <th className="pb-4">Core Feature</th>
+                                            <th className="pb-4 text-center">Free</th>
                                             <th className="pb-4 text-center">Growth Hub</th>
-                                            <th className="pb-4 text-center">Performance Pro</th>
-                                            <th className="pb-4 text-center text-orange-600">Sovereign Enterprise</th>
+                                            <th className="pb-4 text-center text-orange-600">Performance Pro</th>
                                         </tr>
                                     </thead>
                                     <tbody className="text-sm text-slate-700 divide-y divide-slate-100">
+                                        <tr>
+                                            <td className="py-4 font-semibold text-slate-900">Monthly Price</td>
+                                            <td className="py-4 text-center font-bold text-slate-900">₹0</td>
+                                            <td className="py-4 text-center font-bold text-slate-900">₹1,999</td>
+                                            <td className="py-4 text-center font-bold text-orange-600">₹4,999</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="py-4 font-semibold text-slate-900">Website Integration</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="py-4 font-semibold text-slate-900">CRM Integration</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓ (HubSpot, Webhooks)</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓ (Shopify, HubSpot, Zoho)</td>
+                                            <td className="py-4 text-center text-green-500 font-bold">✓ (Custom API, CRM, ERP)</td>
+                                        </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Conversations</td>
                                             <td className="py-4 text-center font-medium">Unlimited</td>
@@ -426,73 +444,55 @@ export default function PricingContentWrapper() {
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Agent Seats</td>
-                                            <td className="py-4 text-center font-medium">Unlimited</td>
+                                            <td className="py-4 text-center font-medium">1 Seat</td>
                                             <td className="py-4 text-center font-medium">Unlimited</td>
                                             <td className="py-4 text-center font-medium">Unlimited</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Channels</td>
+                                            <td className="py-4 text-center font-medium">Web Only</td>
                                             <td className="py-4 text-center font-medium">WhatsApp + Web</td>
                                             <td className="py-4 text-center font-medium">All (7+)</td>
-                                            <td className="py-4 text-center font-medium">All + Custom</td>
                                         </tr>
                                         <tr>
-                                            <td className="py-4 font-semibold text-slate-900">AI Chatbot</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 font-semibold text-slate-900">AI Chatbot & Knowledge Base</td>
+                                            <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Visual Flow Builder</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Automation Rules</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">SLA Management</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Advanced Analytics</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
+                                            <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Custom API Nodes</td>
-                                            <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="py-4 font-semibold text-slate-900">Multi-Location Setup</td>
-                                            <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="py-4 font-semibold text-slate-900">Custom CRM / ERP Integrations</td>
-                                            <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-slate-300">—</td>
-                                            <td className="py-4 text-center text-green-500 font-bold">✓</td>
-                                        </tr>
-                                        <tr>
-                                            <td className="py-4 font-semibold text-slate-900">Named Engineer</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-slate-300">—</td>
                                             <td className="py-4 text-center text-green-500 font-bold">✓</td>
                                         </tr>
                                         <tr>
                                             <td className="py-4 font-semibold text-slate-900">Meta Fee Markup</td>
-                                            <td className="py-4 text-center font-bold text-slate-900">0%</td>
+                                            <td className="py-4 text-center text-slate-300">N/A</td>
                                             <td className="py-4 text-center font-bold text-slate-900">0%</td>
                                             <td className="py-4 text-center font-bold text-slate-900">0%</td>
                                         </tr>

@@ -8,7 +8,7 @@ import PricingContentWrapper from './PricingContentWrapper';
 
 export const metadata: Metadata = {
     title: 'Honest Pricing. No Surprises. | SwanDigitals',
-    description: 'AI Chatbot from ₹4,999/mo. Voice AI from ₹5/min. Unlimited conversations, unlimited agents, zero per-message markup. Flat INR pricing.',
+    description: 'AI Chatbot from ₹1,999/mo (Free plan available). Voice AI from ₹5/min. Unlimited conversations, unlimited agents, zero per-message markup. Flat INR pricing.',
     keywords: ['AI Chatbot Cost India', 'WhatsApp Bot Price India', 'Voice Bot Pricing INR', 'AI Chatbot Pricing India', 'SME Chatbot Price'],
     alternates: {
         canonical: 'https://swandigitals.com/pricing',
@@ -48,9 +48,18 @@ const pricingSchema = {
             offers: [
                 {
                     '@type': 'Offer',
+                    name: 'Free',
+                    description: 'Free website chat widget with CRM integration. Excludes AI features and omnichannel presence.',
+                    price: '0',
+                    priceCurrency: 'INR',
+                    priceSpecification: { '@type': 'UnitPriceSpecification', billingDuration: 'P1M' },
+                    url: 'https://swandigitals.com/pricing#free',
+                },
+                {
+                    '@type': 'Offer',
                     name: 'Growth Hub',
                     description: 'Flat-rate AI chatbot plan for startups and D2C brands. Unlimited agent seats, WhatsApp + Web Chat, RAG knowledge base.',
-                    price: '4999',
+                    price: '1999',
                     priceCurrency: 'INR',
                     priceSpecification: { '@type': 'UnitPriceSpecification', billingDuration: 'P1M' },
                     url: 'https://swandigitals.com/pricing#growth-hub',
@@ -58,20 +67,11 @@ const pricingSchema = {
                 {
                     '@type': 'Offer',
                     name: 'Performance Pro',
-                    description: 'Full omnichannel platform: WhatsApp, Facebook, Web Chat, Voice AI. Unlimited agents. Data hosted in India, DPDP 2023 aware.',
-                    price: '9999',
+                    description: 'Full omnichannel platform: WhatsApp, Facebook, Web Chat, Instagram. Visual Flow Builder & SLA management. Data hosted in India.',
+                    price: '4999',
                     priceCurrency: 'INR',
                     priceSpecification: { '@type': 'UnitPriceSpecification', billingDuration: 'P1M' },
                     url: 'https://swandigitals.com/pricing#performance-pro',
-                },
-                {
-                    '@type': 'Offer',
-                    name: 'Scale',
-                    description: 'For higher volumes and multi-location businesses: priority support, higher call and message limits, and custom onboarding.',
-                    price: '45000',
-                    priceCurrency: 'INR',
-                    priceSpecification: { '@type': 'UnitPriceSpecification', billingDuration: 'P1M' },
-                    url: 'https://swandigitals.com/pricing#scale',
                 },
             ],
         },

@@ -11,7 +11,6 @@ import {
     Database, Calendar, CheckCircle2, Stethoscope, ShoppingBag, Building2
 } from 'lucide-react';
 import Link from 'next/link';
-import FAQ from '@/components/ui/FAQ';
 import IntegrationCloud from '@/components/ui/IntegrationCloud';
 import { useState, useEffect, useRef } from 'react';
 import DashboardMockup from '@/components/ui/DashboardMockup';
@@ -45,7 +44,6 @@ export default function HomePageContent() {
     const statsRef = useReveal();
     const useCasesRef = useReveal();
     const compareRef = useReveal();
-    const ctaRef = useReveal();
 
     const features = [
         { icon: <Bot className="w-5 h-5" />, title: "AI That Understands Context", description: "Your customers don't repeat themselves. SwanDigitals AI remembers full conversation context, auto-resolving FAQs in Hindi, English, and regional languages." },
@@ -582,7 +580,7 @@ export default function HomePageContent() {
                 </div>
             </section>
 
-            {/* 11. INTEGRATIONS & FAQS */}
+            {/* 11. INTEGRATIONS */}
             <IntegrationCloud
                 integrations={[
                     { name: 'WhatsApp', color: '#25D366', image: '/integrations/whatsapp.png', category: 'Messaging' },
@@ -594,29 +592,6 @@ export default function HomePageContent() {
                 ]}
                 note="More integrations coming — request custom API webhooks"
             />
-
-            <FAQ items={[
-                { question: "What is the difference between SwanDigitals Text Chatbot and Voice AI Assistant?", answer: "The Text Chatbot handles digital messaging channels (WhatsApp, Web Chat, Email, Instagram). The Voice AI Assistant answers and places real-time phone calls with sub-500ms speech latency in 10 Indian languages. Both share the exact same central knowledge base." },
-                { question: "Are customer records hosted in India?", answer: "Yes, 100% of customer conversational logs and database records remain strictly within Indian AWS/GCP Mumbai (ap-south-1) servers." },
-                { question: "How long does setup take for a small business?", answer: "Setup takes around 10 minutes. Step 1: Connect WhatsApp or phone line. Step 2: Upload your website URL or PDF catalog. Step 3: Test and go live!" },
-                { question: "Can the Voice AI assistant speak Indian languages?", answer: "Yes, SwanDigitals supports 10 Indian languages including Hindi, Tamil, Telugu, Marathi, Gujarati, Bengali, and Hinglish with natural voice synthesis." },
-            ]} />
-
-            {/* 12. FINAL CONVERSION CTA */}
-            <section ref={ctaRef} className="py-20 lg:py-24 bg-slate-900 text-white text-center">
-                <div className="max-w-4xl mx-auto px-5 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Automate Customer Chats & Phone Calls?</h2>
-                    <p className="text-base text-slate-400 mb-8 max-w-xl mx-auto">Get a free 10-minute setup demonstration tailored to your exact business workflows.</p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <Link href="/demo" className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white rounded-full font-semibold text-sm shadow-orange transition-all">
-                            Book Free Prototype Demo
-                        </Link>
-                        <a href="https://chat.swandigitals.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-slate-700 text-white hover:bg-slate-800 rounded-full font-semibold text-sm transition-all">
-                            Sign Up Free
-                        </a>
-                    </div>
-                </div>
-            </section>
         </SiteLayout>
     );
 }

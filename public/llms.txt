@@ -44,7 +44,7 @@
 - [Home](https://swandigitals.com/): Full overview of SwanDigitals — omnichannel AI inbox for Indian businesses. Covers key features, pricing overview, integrations, competitor comparisons, how onboarding works, and FAQ.
 - [Platform](https://swandigitals.com/platform): Architecture overview — unified omnichannel inbox, SwanAI Control Center with 12 tabs, analytics dashboard, deployment options (cloud and on-premise), and integration ecosystem.
 - [Features](https://swandigitals.com/features): Full feature breakdown — AI auto-reply, RAG knowledge base, multi-channel inbox, agent collaboration, SLA management, CSAT, auto-tagging, canned responses, and more.
-- [Pricing](https://swandigitals.com/pricing): Three flat-rate plans — Growth Hub (₹4,999/mo), Performance Pro (₹14,999/mo), Sovereign Enterprise (₹28,000/mo). No per-seat, no per-conversation billing. 0% markup on Meta WhatsApp fees.
+- [Pricing](https://swandigitals.com/pricing): Flat-rate plans — Free (₹0 forever for website chat & CRM), Growth Hub (₹1,999/mo), Performance Pro (₹4,999/mo). No per-seat, no per-conversation billing. 0% markup on Meta WhatsApp fees.
 - [Demo](https://swandigitals.com/demo): Book a 30-minute live walkthrough of SwanDigitals — inbox, AI configuration, analytics, and deployment options.
 - [Contact](https://swandigitals.com/contact): Reach SwanDigitals — email (support@swandigitals.com), phone (+91 7770070762), contact form. Office in Pune, Maharashtra.
 - [FAQs](https://swandigitals.com/faqs): 70+ frequently asked questions — use cases, technical architecture, pricing, onboarding, data security, DPDP compliance, and WhatsApp Business API.

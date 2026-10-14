@@ -31,7 +31,7 @@ export default function VsAiSensyPage() {
                 },
                 {
                     title: "Flat Rupee Pricing",
-                    description: "Say goodbye to tiered pricing and subscriber-limit penalties. Pay a flat plan from ₹4,999/mo with no per-message markup."
+                    description: "Say goodbye to tiered pricing and subscriber-limit penalties. Pay a flat plan from ₹1,999/mo with no per-message markup."
                 }
             ]}
             comparisonRows={[
@@ -39,7 +39,7 @@ export default function VsAiSensyPage() {
                 { feature: "Channels Supported", SwanDigitals: "WhatsApp, Facebook, Web, Voice", competitor: "WhatsApp Only" },
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/menu/docs", competitor: "Basic Keyword Rules" },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Tiered / Volume Based" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Tiered / Volume Based" }
             ]}
             targetPersona="your sole goal is to blast promotional templates to contact lists and you do not need voice calling or a multi-channel inbox — AiSensy is a simple, focused broadcast tool."
             verdict="you are an Indian SME that wants WhatsApp, Facebook, web chat and +91 AI calling in one inbox, 10 Indian languages, and a flat monthly rupee plan with no per-message markup."

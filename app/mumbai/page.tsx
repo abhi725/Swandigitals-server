@@ -30,7 +30,7 @@ export default function MumbaiPage() {
         }
     ];
 
-    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "7 Days", "label": "To Go Live"}, {"value": "₹4,999", "label": "Starting Plan"}, {"value": "24/7", "label": "AI Support"}];
+    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "7 Days", "label": "To Go Live"}, {"value": "₹1,999", "label": "Starting Plan"}, {"value": "24/7", "label": "AI Support"}];
 
     return (
         <LocationPageTemplate

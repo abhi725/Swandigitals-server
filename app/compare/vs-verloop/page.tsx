@@ -25,7 +25,7 @@ export default function VsVerloopPage() {
                 { feature: "Voice AI", SwanDigitals: "Native (+91 calls)", competitor: "Limited/Third-party" },
                 { feature: "Agent Inbox", SwanDigitals: "Chat + voice in one place", competitor: "Chat inbox" },
                 { feature: "Best Fit", SwanDigitals: "Indian SMEs", competitor: "Mid-market / enterprise" },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Usage / tier based" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Usage / tier based" }
             ]}
             reasonsToSwitch={[
                 {

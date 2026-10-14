@@ -18,9 +18,9 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
                             description: "Returns SwanDigitals flat-rate monthly pricing plans for Indian SMEs.",
                             execute: async () => ({
                                 plans: [
-                                    { name: "Growth Hub", price: "₹4,999/mo", deflection: "80%" },
-                                    { name: "Performance Pro", price: "₹14,999/mo", deflection: "90%" },
-                                    { name: "Sovereign Enterprise", price: "₹28,000/mo", deployment: "On-Premise" }
+                                    { name: "Free", price: "₹0/mo", description: "Website chat widget & CRM sync" },
+                                    { name: "Growth Hub", price: "₹1,999/mo", deflection: "80%" },
+                                    { name: "Performance Pro", price: "₹4,999/mo", deflection: "90%" }
                                 ]
                             })
                         },

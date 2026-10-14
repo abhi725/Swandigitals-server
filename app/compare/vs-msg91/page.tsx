@@ -39,7 +39,7 @@ export default function VsMsg91Page() {
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/menu/docs", competitor: "Basic Text Rules" },
                 { feature: "Channels Supported", SwanDigitals: "WhatsApp, Facebook, Web, Voice", competitor: "SMS-centric" },
                 { feature: "+91 Voice AI", SwanDigitals: "AI Voice Agents (10 languages)", competitor: "Standard IVR Routing" },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-Unit Usage" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-Unit Usage" }
             ]}
             targetPersona="you mainly need high-volume transactional OTP SMS and carrier-grade delivery — MSG91 is reliable and well-suited to that job."
             verdict="you are an Indian SME that wants WhatsApp, Facebook, web chat and +91 AI calling in one inbox, 10 Indian languages, and flat rupee pricing with no per-message markup."

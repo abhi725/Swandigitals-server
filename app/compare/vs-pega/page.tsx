@@ -23,7 +23,7 @@ export default function VsPegaPage() {
             comparisonRows={[
                 { feature: "Core Focus", SwanDigitals: "Chat + Voice Engagement", competitor: "Complex Business Systems" },
                 { feature: "Launch Time", SwanDigitals: "Live in days", competitor: "Many months or years" },
-                { feature: "Total Cost", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Very high setup fees" },
+                { feature: "Total Cost", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Very high setup fees" },
                 { feature: "Flexibility", SwanDigitals: "No-code updates in minutes", competitor: "Requires expert developers" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Sold as an expensive add-on" }
             ]}
@@ -34,7 +34,7 @@ export default function VsPegaPage() {
                 },
                 {
                     title: "Predictable, Clear Rupee Pricing",
-                    description: "Pega costs a lot in setup and consulting fees. SwanDigitals offers flat plans from ₹4,999/mo with no per-message markup."
+                    description: "Pega costs a lot in setup and consulting fees. SwanDigitals offers flat plans from ₹1,999/mo with no per-message markup."
                 },
                 {
                     title: "Chat and Voice in One Inbox",

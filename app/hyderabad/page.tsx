@@ -30,7 +30,7 @@ export default function HyderabadPage() {
         }
     ];
 
-    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "24/7", "label": "Patient Booking"}, {"value": "7 Days", "label": "To Go Live"}, {"value": "₹4,999", "label": "Starting Plan"}];
+    const stats = [{"value": "10", "label": "Indian Languages"}, {"value": "24/7", "label": "Patient Booking"}, {"value": "7 Days", "label": "To Go Live"}, {"value": "₹1,999", "label": "Starting Plan"}];
 
     return (
         <LocationPageTemplate

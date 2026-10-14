@@ -21,7 +21,7 @@ export default function VsZendeskPage() {
             competitorStrengths="A mature ticket escalation framework, extensive integrations, and decades of customer service reputation."
             realityCheck="Zendesk was designed for large teams working tickets manually, and its AI and voice are extra paid add-ons that get expensive for a small or mid-sized Indian business. SwanDigitals unifies chat, WhatsApp and +91 voice in one inbox that auto-trains on your content, on flat rupee pricing. Where Zendesk may fit better: large enterprises with big agent teams and complex, established ticketing processes."
             comparisonRows={[
-                { feature: "Starting Price", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-agent + AI add-ons" },
+                { feature: "Starting Price", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-agent + AI add-ons" },
                 { feature: "AI Chatbot", SwanDigitals: "Included", competitor: "Expensive Add-on" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Third-party integrations" },
                 { feature: "WhatsApp API", SwanDigitals: "Native", competitor: "Requires integration" },

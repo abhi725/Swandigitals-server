@@ -129,7 +129,7 @@ export default function DemoContent() {
                                     <li className="flex items-start gap-3"><span className="text-orange-400 mt-1">✓</span><span>Live walkthrough of the AI inbox, voice agents, and automation builder</span></li>
                                     <li className="flex items-start gap-3"><span className="text-orange-400 mt-1">✓</span><span>Custom ROI projection based on your current support volume</span></li>
                                     <li className="flex items-start gap-3"><span className="text-orange-400 mt-1">✓</span><span>Overview of WhatsApp, chat, and voice channels in one inbox</span></li>
-                                    <li className="flex items-start gap-3"><span className="text-orange-400 mt-1">✓</span><span>Clear next steps with flat ₹ pricing starting at ₹4,999/mo</span></li>
+                                    <li className="flex items-start gap-3"><span className="text-orange-400 mt-1">✓</span><span>Clear next steps with flat ₹ pricing starting at ₹1,999/mo (Free plan available)</span></li>
                                 </ul>
                             </div>
                         </div>

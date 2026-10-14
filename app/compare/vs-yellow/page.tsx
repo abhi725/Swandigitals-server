@@ -19,9 +19,9 @@ export default function VsYellowPage() {
             heroSubtitle="Indian SMEs deserve predictable pricing and fast go-live. Get chat plus +91 voice in one inbox on flat rupee plans, live in days."
             aboutCompetitor="Yellow.ai operates a large global conversation automation engine aimed at enterprise accounts."
             competitorStrengths="Deep developer toolkits, broad channel coverage, and experience with large enterprise customers."
-            realityCheck="Yellow.ai typically bills on conversation usage, so as your automated chats grow your bill climbs, and the platform is sized for enterprise teams. SwanDigitals uses simple flat plans from ₹4,999/mo with no per-message markup, and goes live in days. Where Yellow.ai may fit better: large global enterprises needing heavy developer SDKs and multi-region rollouts."
+            realityCheck="Yellow.ai typically bills on conversation usage, so as your automated chats grow your bill climbs, and the platform is sized for enterprise teams. SwanDigitals uses simple flat plans from ₹1,999/mo with no per-message markup, and goes live in days. Where Yellow.ai may fit better: large global enterprises needing heavy developer SDKs and multi-region rollouts."
             comparisonRows={[
-                { feature: "Pricing Model", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Usage / conversation based" },
+                { feature: "Pricing Model", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Usage / conversation based" },
                 { feature: "Best Fit", SwanDigitals: "Indian SMEs", competitor: "Global Enterprise" },
                 { feature: "Time to Go Live", SwanDigitals: "Live in days", competitor: "Weeks to months" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Add-on / enterprise" },

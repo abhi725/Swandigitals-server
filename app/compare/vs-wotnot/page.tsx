@@ -39,7 +39,7 @@ export default function VsWotNotPage() {
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/docs", competitor: "Basic / Add-on" },
                 { feature: "Indian Languages", SwanDigitals: "10 Indian languages", competitor: "Limited" },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-Tier" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-Tier" }
             ]}
             targetPersona="you mainly want to build visual chatbot flows and lead widgets for websites — WotNot's drag-and-drop canvas is strong for that."
             verdict="you are an Indian SME that wants WhatsApp, Facebook, web chat and +91 AI calling in one inbox, 10 Indian languages, and flat rupee pricing with no per-message markup."

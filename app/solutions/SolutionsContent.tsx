@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { 
     MessageSquare, Phone, Headphones, Users, Server, Briefcase, 
     Building2, ShoppingCart, Stethoscope, Landmark, CheckCircle2, 
-    ArrowRight, ShieldCheck, Zap, Bot, Database, Sparkles, Layers, Check
+    ArrowRight, ShieldCheck, Zap, Bot, Database, Sparkles, Layers, Check, Utensils
 } from 'lucide-react';
 
 export default function SolutionsContent() {
@@ -91,6 +91,14 @@ export default function SolutionsContent() {
 
     const industries = [
         {
+            icon: <Utensils className="w-8 h-8 text-orange-600" />,
+            title: "Restaurants & Cloud Kitchens",
+            desc: "AI waiter on WhatsApp, Instagram & Telegram for table QR ordering and home delivery with 0% commission.",
+            link: "/solutions/restaurants",
+            badge: "WhatsApp & Insta Food Ordering",
+            color: "border-orange-200 bg-orange-50/30"
+        },
+        {
             icon: <Stethoscope className="w-8 h-8 text-emerald-600" />,
             title: "Clinics, Hospitals & Pharmacies",
             desc: "Automate appointment booking, reminders that cut no-shows, report delivery, and refill queries on WhatsApp and voice.",
@@ -110,7 +118,7 @@ export default function SolutionsContent() {
             icon: <Building2 className="w-8 h-8 text-orange-600" />, 
             title: "Real Estate & Builders", 
             desc: "Instantly capture luxury buyer DMs on Instagram/WhatsApp, share PDF brochures, qualify budget, and schedule site visits.", 
-            link: "/demo", 
+            link: "/solutions/real-estate", 
             badge: "Site Visit Booking",
             color: "border-orange-200 bg-orange-50/30" 
         }

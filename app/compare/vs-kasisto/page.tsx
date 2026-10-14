@@ -25,12 +25,12 @@ export default function VsKasistoPage() {
                 { feature: "Indian Languages", SwanDigitals: "10 Indian languages", competitor: "Basic translation only" },
                 { feature: "Data Hosting", SwanDigitals: "Hosted in India", competitor: "US-focused cloud" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Requires third-party tools" },
-                { feature: "Pricing Plan", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Expensive enterprise rates" }
+                { feature: "Pricing Plan", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Expensive enterprise rates" }
             ]}
             reasonsToSwitch={[
                 {
                     title: "Priced for an Indian SME",
-                    description: "No enterprise contracts or procurement committees. Flat rupee plans from ₹4,999/mo, paid simply through Razorpay."
+                    description: "No enterprise contracts or procurement committees. Flat rupee plans from ₹1,999/mo, paid simply through Razorpay."
                 },
                 {
                     title: "Real Indian Language Support",

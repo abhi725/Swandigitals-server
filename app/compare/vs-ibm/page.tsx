@@ -25,7 +25,7 @@ export default function VsIbmPage() {
                 { feature: "Deployment Method", SwanDigitals: "Fully Managed", competitor: "Requires Heavy IT" },
                 { feature: "UI/UX", SwanDigitals: "Modern & Intuitive", competitor: "Legacy Corporate" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "Complex Integration" },
-                { feature: "Total Cost", SwanDigitals: "From ₹4,999/mo flat", competitor: "Software + Consulting Fees" }
+                { feature: "Total Cost", SwanDigitals: "From ₹1,999/mo flat", competitor: "Software + Consulting Fees" }
             ]}
             reasonsToSwitch={[
                 {

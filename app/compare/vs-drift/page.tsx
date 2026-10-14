@@ -23,7 +23,7 @@ export default function VsDriftPage() {
             reasonsToSwitch={[
                 {
                     title: "Flat Rupee Pricing",
-                    description: "Avoid large US enterprise premiums. SwanDigitals offers flat plans from ₹4,999/mo with no per-message markup."
+                    description: "Avoid large US enterprise premiums. SwanDigitals offers flat plans from ₹1,999/mo with no per-message markup."
                 },
                 {
                     title: "Sales and Support Together",
@@ -36,7 +36,7 @@ export default function VsDriftPage() {
             ]}
             comparisonRows={[
                 { feature: "Primary Use Case", SwanDigitals: "Sales + Support", competitor: "Pure B2B Sales" },
-                { feature: "Pricing Tier", SwanDigitals: "Flat from ₹4,999/mo", competitor: "$2,500+/month minimum" },
+                { feature: "Pricing Tier", SwanDigitals: "Flat from ₹1,999/mo", competitor: "$2,500+/month minimum" },
                 { feature: "WhatsApp Support", SwanDigitals: "Native", competitor: "Limited/Add-on" },
                 { feature: "Voice AI", SwanDigitals: "Included (+91 calls)", competitor: "No" },
                 { feature: "Data Hosting", SwanDigitals: "Hosted in India", competitor: "Global" }

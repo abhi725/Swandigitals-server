@@ -23,7 +23,7 @@ export default function VsQuickMessagePage() {
             reasonsToSwitch={[
                 {
                     title: "Flat Rupee Pricing",
-                    description: "Avoid budget surprises. Pay a flat plan from ₹4,999/mo so you can scale conversations without paying more for every message."
+                    description: "Avoid budget surprises. Pay a flat plan from ₹1,999/mo so you can scale conversations without paying more for every message."
                 },
                 {
                     title: "Ready-to-Use, No Coding",
@@ -35,7 +35,7 @@ export default function VsQuickMessagePage() {
                 }
             ]}
             comparisonRows={[
-                { feature: "Pricing Model", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Pay-As-You-Go Usage" },
+                { feature: "Pricing Model", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Pay-As-You-Go Usage" },
                 { feature: "Ready to Use", SwanDigitals: "Working Inbox + AI Agent", competitor: "Developer API Tool" },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
                 { feature: "Channels Supported", SwanDigitals: "WhatsApp, Facebook, Web, Voice", competitor: "Primarily WhatsApp" },

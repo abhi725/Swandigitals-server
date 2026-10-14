@@ -38,7 +38,7 @@ export default function VsPersoneticsPage() {
                 },
                 {
                     title: "Priced for an SME",
-                    description: "Flat rupee plans from ₹4,999/mo through Razorpay, with no per-message markup and no enterprise contracts."
+                    description: "Flat rupee plans from ₹1,999/mo through Razorpay, with no per-message markup and no enterprise contracts."
                 }
             ]}
             targetPersona="You are a large bank that wants deep, data-driven financial personalization and insight engines rather than an everyday support inbox."

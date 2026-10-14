@@ -39,7 +39,7 @@ export default function VsGupshupPage() {
                 { feature: "Agent Interface", SwanDigitals: "One Ready Inbox", competitor: "Developer API Only" },
                 { feature: "AI Agent", SwanDigitals: "Auto-trains on your site/menu/docs", competitor: "Basic Keyword Bots" },
                 { feature: "+91 Voice AI Calling", SwanDigitals: true, competitor: false },
-                { feature: "Pricing", SwanDigitals: "Flat from ₹4,999/mo", competitor: "Per-Message Usage" }
+                { feature: "Pricing", SwanDigitals: "Flat from ₹1,999/mo", competitor: "Per-Message Usage" }
             ]}
             targetPersona="you need a high-volume developer API to broadcast messages at scale and build your own keyword flows — Gupshup's gateway is built for that."
             verdict="you are an Indian SME that wants a ready inbox with WhatsApp, Facebook, web chat and +91 AI calling, 10 Indian languages, and flat rupee pricing with no per-message markup."
